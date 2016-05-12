@@ -29,8 +29,9 @@ public class SnakeCamelUtil {
 		return new String(sb);
 	}
 	
-	static String capitalize(String s) {
-		char first = s.charAt(0);
+	static String capitalize(String s) {	
+		if(s.length()==0) return s; //追加
+		char  first = s.charAt(0);
 		char upperFirst = Character.toUpperCase(first);
 		String rest = s.substring(1);
 		return upperFirst + rest;
